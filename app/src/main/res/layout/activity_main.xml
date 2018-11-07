@@ -131,7 +131,7 @@
                 </LinearLayout>
 
                 <ImageView
-                    android:id="@+id/menuBottom"
+                    android:id="@+id/playPauseBottomButton"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_gravity="end|center_vertical"
@@ -139,7 +139,7 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:src="@drawable/ic_pause_circle_outline_black_24dp"
-                    android:tint="@android:color/darker_gray" />
+                    android:tint="@color/colorPrimary" />
 
             </FrameLayout>
 

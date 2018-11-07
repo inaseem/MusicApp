@@ -10,6 +10,7 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.mancj.slideup.SlideUp;
 import com.mancj.slideup.SlideUpBuilder;
@@ -21,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
     private View bottomContainer, slideUp;
+    private ImageView playPauseButton;
+    private ImageView playPauseBottomButton;
+    private boolean isPlaying = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,43 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         bottomContainer = findViewById(R.id.bottomContainer);
         slideUp = findViewById(R.id.slideUp);
+        playPauseButton = findViewById(R.id.playPauseButton);
+        playPauseBottomButton = findViewById(R.id.playPauseBottomButton);
+        if (isPlaying) {
+            playPauseButton.setImageResource(R.drawable.ic_pause_circle_outline_black_24dp);
+            playPauseBottomButton.setImageResource(R.drawable.ic_pause_circle_outline_black_24dp);
+        } else {
+            playPauseButton.setImageResource(R.drawable.ic_play_circle_outline_black_24dp);
+            playPauseBottomButton.setImageResource(R.drawable.ic_play_circle_outline_black_24dp);
+        }
+        playPauseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isPlaying) {
+                    playPauseButton.setImageResource(R.drawable.ic_play_circle_outline_black_24dp);
+                    playPauseBottomButton.setImageResource(R.drawable.ic_play_circle_outline_black_24dp);
+                    isPlaying = false;
+                } else {
+                    playPauseButton.setImageResource(R.drawable.ic_pause_circle_outline_black_24dp);
+                    playPauseBottomButton.setImageResource(R.drawable.ic_pause_circle_outline_black_24dp);
+                    isPlaying = true;
+                }
+            }
+        });
+        playPauseBottomButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isPlaying) {
+                    playPauseButton.setImageResource(R.drawable.ic_play_circle_outline_black_24dp);
+                    playPauseBottomButton.setImageResource(R.drawable.ic_play_circle_outline_black_24dp);
+                    isPlaying = false;
+                } else {
+                    playPauseButton.setImageResource(R.drawable.ic_pause_circle_outline_black_24dp);
+                    playPauseBottomButton.setImageResource(R.drawable.ic_pause_circle_outline_black_24dp);
+                    isPlaying = true;
+                }
+            }
+        });
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -39,17 +80,9 @@ public class MainActivity extends AppCompatActivity {
         new SlideUpBuilder(slideUp)
                 .withStartState(SlideUp.State.HIDDEN)
                 .withStartGravity(Gravity.BOTTOM)
-
                 .withSlideFromOtherView(bottomContainer)
                 .withGesturesEnabled(true)
-                //.withHideSoftInputWhenDisplayed()
-                //.withInterpolator()
-                //.withAutoSlideDuration()
-                //.withLoggingEnabled()
-                //.withTouchableAreaDp()
                 .withTouchableAreaPx(getResources().getDisplayMetrics().heightPixels)
-                //.withListeners()
-                //.withSavedState()
                 .build();
     }
 
