@@ -1,5 +1,6 @@
 package ali.naseem.musicapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -62,8 +63,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id) {
+            case R.id.menu_about:
+                Intent intent = new Intent(this, About.class);
+                startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }

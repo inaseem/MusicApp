@@ -76,11 +76,6 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="72dp"
@@ -117,7 +112,7 @@
                         android:gravity="center_vertical"
                         android:maxLines="1"
                         android:singleLine="true"
-                        android:text="Billian Billian"
+                        android:text="@string/song_name"
                         android:textAlignment="center"
                         android:textSize="16sp" />
 
@@ -130,7 +125,7 @@
                         android:gravity="center_vertical"
                         android:maxLines="1"
                         android:singleLine="true"
-                        android:text="Guru Randhava . 3:49"
+                        android:text="@string/artist_time"
                         android:textAlignment="center" />
 
                 </LinearLayout>
