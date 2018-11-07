@@ -229,10 +229,10 @@
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:padding="10dp"
                         android:src="@drawable/ic_more_vert_black_24dp"
-                        android:tint="@android:color/white" />
+                        android:tint="@android:color/white"
+                        android:visibility="gone" />
 
                 </FrameLayout>
-
 
             </LinearLayout>
 
@@ -251,6 +251,7 @@
                 app:layout_constraintBottom_toBottomOf="parent">
 
                 <ImageView
+                    android:id="@+id/previousButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -262,6 +263,7 @@
                     android:tint="@android:color/darker_gray" />
 
                 <ImageView
+                    android:id="@+id/playPauseButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -269,9 +271,10 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:src="@drawable/ic_pause_circle_outline_black_24dp"
-                    android:tint="@color/colorAccent" />
+                    android:tint="@color/colorPrimary" />
 
                 <ImageView
+                    android:id="@+id/nextButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -284,10 +287,10 @@
             </LinearLayout>
 
             <ImageView
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/large"
                 app:layout_constraintBottom_toTopOf="@id/playbackControls"
