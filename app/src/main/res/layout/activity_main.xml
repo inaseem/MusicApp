@@ -88,7 +88,7 @@
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/song1" />
+                android:src="@drawable/song5" />
 
             <FrameLayout
                 android:layout_width="0dp"
@@ -172,7 +172,7 @@
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/song1" />
+                    android:src="@drawable/song5" />
 
                 <FrameLayout
                     android:layout_width="0dp"
@@ -196,7 +196,7 @@
                             android:gravity="center_vertical"
                             android:maxLines="1"
                             android:singleLine="true"
-                            android:text="Billian Billia"
+                            android:text="@string/song_name"
                             android:textAlignment="center"
                             android:textColor="@android:color/white"
                             android:textSize="16sp" />
@@ -210,7 +210,7 @@
                             android:gravity="center_vertical"
                             android:maxLines="1"
                             android:singleLine="true"
-                            android:text="Samsung . 3:49"
+                            android:text="@string/artist_time"
                             android:textAlignment="center"
                             android:textColor="@android:color/white" />
 
@@ -286,8 +286,8 @@
                 android:layout_height="0dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/large"
+                android:scaleType="fitCenter"
+                android:src="@drawable/song5"
                 app:layout_constraintBottom_toTopOf="@id/playbackControls"
                 app:layout_constraintTop_toBottomOf="@id/topContainer" />
         </android.support.constraint.ConstraintLayout>

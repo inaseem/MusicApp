@@ -19,9 +19,6 @@ import ali.naseem.musicapp.adapters.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
-    private SectionsPagerAdapter mSectionsPagerAdapter;
-    private ViewPager mViewPager;
-    private View bottomContainer, slideUp;
     private ImageView playPauseButton;
     private ImageView playPauseBottomButton;
     private boolean isPlaying = false;
@@ -30,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        bottomContainer = findViewById(R.id.bottomContainer);
-        slideUp = findViewById(R.id.slideUp);
+        View bottomContainer = findViewById(R.id.bottomContainer);
+        View slideUp = findViewById(R.id.slideUp);
         playPauseButton = findViewById(R.id.playPauseButton);
         playPauseBottomButton = findViewById(R.id.playPauseBottomButton);
         if (isPlaying) {
@@ -71,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
         });
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        ViewPager mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/affogato_medium"
         android:gravity="center"
-        android:padding="8dp"
+        android:padding="18dp"
         android:text="@string/byme"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent" />

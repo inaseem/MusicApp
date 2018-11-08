@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">MusicApp</string>
+    <string name="about">About</string>
     <string name="tab_text_1">Pop</string>
     <string name="tab_text_2">Jazz</string>
     <string name="tab_text_3">Hip Hop</string>
@@ -7,8 +8,8 @@
     <string name="play_now">Play Now</string>
     <string name="play_next">Play Next</string>
     <string name="enqueue">Add To Queue</string>
-    <string name="song_name">Billian Billian</string>
-    <string name="artist_time">Guru Randhava    3:49</string>
+    <string name="song_name">Urvashi</string>
+    <string name="artist_time">Yo Yo Honey Singh    5:00</string>
     <string name="action_about">About</string>
     <string name="libraries">Libraries Used</string>
     <string name="slideup">Slide Up</string>
